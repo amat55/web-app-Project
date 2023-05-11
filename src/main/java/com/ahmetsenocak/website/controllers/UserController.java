@@ -2,7 +2,6 @@ package com.ahmetsenocak.website.controllers;
 
 import com.ahmetsenocak.website.entities.User;
 import com.ahmetsenocak.website.services.UserService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
@@ -29,7 +28,7 @@ public class UserController {
 
     @GetMapping("/{userId}")
     public User getUserById(@PathVariable Long userId) {
-        return userService.getOneUser(userId);
+        return userService.getOneUserById(userId);
     }
 
     @PutMapping("/{userId}")
